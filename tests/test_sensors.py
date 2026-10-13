@@ -51,3 +51,6 @@ def test_torque_range(df, col):
 def test_noise_level(df, col):
     rolling_std = df[col].rolling(window=50).std().dropna()
     assert rolling_std.max() < 5.0, f"{col} has excessive noise spikes (rolling std > 5)"
+
+def test_example():
+    assert 2 + 2 == 4
